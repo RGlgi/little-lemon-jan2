@@ -1,38 +1,880 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Indie+Flower&family=Lobster&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.2rem;
+}
+
+.CartIcon {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+a {
+  color: #495e57;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Karla', cursive;
+}
+.Footer a {
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  color: #f4ce14;
+  transform: scale(1.3);
+}
+.Button1 {
+  background-color: #f4ce14;
+  border-radius: 1.7rem;
+  border: none;
+  font-size: 1rem;
+  height: 2rem;
+  width: 10rem;
+  color: #ffffff;
+  font-family: 'Karla', cursive;
+  margin-bottom: 1rem;
+}
+.Button1:hover {
+  background-color: #f3eeea;
+  color: #495e57;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.Testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 0px 0px;
+  grid-template-areas:
+    'T-Title T-Title T-Title T-Title'
+    'T1 T1 T1 T1'
+    '. . . .';
+  grid-area: 4 / 2 / 5 / 6;
+
+  background-color: #495e57;
+}
+.T-Title {
+  grid-area: T-Title;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 3rem;
+  font-family: 'Caveat', cursive;
+}
+.TArticle {
+  background-color: #edefee;
+  border-radius: 1rem;
+  font-size: smaller;
+  width: 10rem;
+  height: 17rem;
+  padding: 1rem;
+}
+.TList {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+.ButtonMore {
+  color: #a3ada9;
+  font-size: 0.7rem;
+  border: none;
+}
+.ButtonMore :hover {
+  color: #686a69;
+  font-size: 0.9rem;
+}
+.TImg {
+  grid-area: TImg;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+.TName {
+  font-size: 0.8rem;
+  font-family: 'Indie Flower', cursive;
+  color: #495e57;
+}
+.TTime {
+  color: #a3ada9;
+  font-family: 'Indie Flower', cursive;
+}
+.TStar {
+  color: red;
+}
+.TReview {
+  font-size: 0.6rem;
+  color: #495e57;
+  font-family: 'Indie Flower', cursive;
+}
+.Footer {
+  grid-area: 6 / 2 / 7 / 6;
+}
+
+.Main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . . .'
+    'MainArticle MainArticle MainImg MainImg'
+    'MainArticle MainArticle MainImg MainImg'
+    '. . . .';
+  grid-area: 2 / 2 / 3 / 6;
+  background-color: #495e57;
+  align-items: center;
+}
+
+.MainArticle {
+  grid-area: MainArticle;
+  color: #ffffff;
+  margin-left: 3rem;
+}
+.MainArticle h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #f4ce14;
+  font-family: 'Caveat', cursive;
+}
+.MainArticle h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.MainArticle p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.MainImg {
+  grid-area: MainImg;
+  display: flex;
+}
+.MainImg Img {
+  margin-left: 2rem;
+  max-width: 30rem;
+  height: 70%;
+  width: 90%;
+  border-radius: 4%;
+  margin-bottom: -10rem;
+}
+.MainLogo {
+  width: 10rem;
+}
+.BLogo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . .'
+    '. LogoB .'
+    '. . .';
+  grid-area: 6 / 2 / 7 / 3;
+  width: 10rem;
+  height: 10rem;
+  margin-left: 10rem;
+}
+
+.LogoB {
+  grid-area: LogoB;
+  width: 5rem;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.Footer {
+  grid-area: 6 / 2 / 7 / 6;
+  background-color: #ffffff;
+  display: flex;
+
+  background-color: #495e57;
+  padding-bottom: 3rem;
+}
+
+.FooterLinks {
+  grid-area: 6 / 3 / 7 / 6;
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.Bottom {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Indie Flower', cursive;
+  font-size: 0.5rem;
+  background-color: #a6cf98;
+  height: 2rem;
+}
+/* Menu */
+.Menu Img {
+  width: 15rem;
+  height: 12rem;
+
+  justify-content: center;
+  align-items: center;
+}
+.MenuTitle {
+  background-color: #495e57;
+  padding-bottom: 2rem;
+}
+.MenuTitle h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  color: #f4ce14;
+  font-family: 'Karla', cursive;
+}
+
+.MenuTitle p {
+  color: #edefee;
+  text-align: center;
+  font-size: 1rem;
+  margin: 2rem;
+  font-family: 'Karla', cursive;
+}
+.MenuC {
+  height: auto;
+  color: #495e57;
+}
+.Menu {
+  max-width: 100vmax;
+  margin-bottom: 1rem;
+
+  font-family: 'karla', cursive;
+
+  color: #495e57;
+  font-size: 0.7rem;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+}
+.MenuDataList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 10px;
+  justify-items: center;
+  margin: 1rem;
+}
+.Button2 {
+  background-color: #f4ce14;
+  color: black;
+  border-radius: 1.7rem;
+  border: none;
+  font-weight: bold;
+  height: 2rem;
+  width: 10rem;
+  font-family: 'Karla', cursive;
+  margin-bottom: 1rem;
+}
+.Button2:hover {
+  background-color: #495e57;
+  color: #ffffff;
+
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/* Menu End */
+
+.Nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . . .'
+    'HeaderLogo NavList NavList NavList'
+    'HeaderLogo NavList NavList NavList'
+    '. . . .';
+  grid-area: 1 / 2 / 2 / 6;
+  width: 100vw;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.HeaderLogo {
+  grid-area: HeaderLogo;
+  display: flex;
+  justify-content: center;
+}
+.HeaderLogo Img {
+  height: 3rem;
+}
+.NavList {
+  grid-area: NavList;
+  margin-left: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  display: flex;
+}
+.Sp {
+  display: grid;
+  margin-top: 10rem;
+  grid-template-columns: 1fr;
+
+  gap: 0px 0px;
+  grid-template-areas:
+    'SpTitleButton'
+    '.';
+  grid-area: 3 / 2 / 4 / 6;
+  align-items: center;
+  margin-left: 3rem;
+  padding: 1rem;
+}
+.SpTitleButton {
+  /* grid-area: SpTitleButton; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+}
+
+.Specials-Article {
+  background-color: #f3eeea86;
+  border-radius: 1rem;
+  font-size: smaller;
+  width: 14rem;
+  height: 18rem;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+}
+.Specials-Article h2 {
+  font-size: 1.2rem;
+  color: #495e57;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+.Specials-Article h4 {
+  font-size: 0.7rem;
+  color: #495e57;
+  padding: 0.5rem;
+  /* text-align: center; */
+}
+.Specials-Article h3 {
+  font-size: 0.8rem;
+  color: #de4545;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SDataList {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  width: 30%;
+  margin-top: 2rem;
+}
+.SDataList Img {
+  width: 10rem;
+  border-radius: 10%;
+  object-fit: cover;
+}
+.SpTitleButton h2 {
+  color: #495e57;
+}
+.BookNow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'BookNowImgContainer BookNowArticle'
+    'BookNowImgContainer BookNowArticle'
+    'BookNowImgContainer BookNowArticle';
+  grid-area: 5 / 2 / 6 / 6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.BookNowArticle {
+  grid-area: BookNowArticle;
+  color: #495e57;
+  padding: 2rem;
+  font-family: 'Indie Flower', cursive;
+}
+.BookNowArticle button {
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.BookNowArticle h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+}
+.BookNowImgContainer {
+  grid-area: BookNowImgContainer;
+  padding: 3rem;
+}
+.BookNowImgContainer Img {
+  width: 20rem;
+  border-radius: 10%;
+}
+.PriceCartImg Img {
+  width: 1.5rem;
+}
+.PriceCartImg {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  justify-content: center;
+  margin-bottom: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Order Online */
+.Button3 {
+  background-color: #f4ce14;
+  border-radius: 1.7rem;
+  border: none;
+  font-size: 0.6rem;
+  height: 1.5rem;
+  width: 4rem;
+  color: black;
+  font-family: 'Karla', cursive;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.Button3:hover {
+  background-color: #f3eeea;
+  color: #495e57;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.OrderMain {
+  background-color: #495e57;
+  color: #ffffff;
+  padding: 1rem;
+}
+.orderList {
+  background-color: #ffffff;
+  font-family: 'Karla', cursive;
+  padding: 1rem;
+}
+
+.orderList h2 {
+  font-size: 1rem;
+}
+.orderList h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: lighter;
+  color: #495e57;
+}
+.OrderMain h1 {
+  font-size: 3rem;
+
+  color: #f4ce14;
+  font-family: 'Indie Flower', cursive;
+}
+.OrderMain h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  font-family: 'Martazi' cursive;
+}
+.OrderMain p {
+  text-align: left;
+  font-size: 1rem;
+  width: 50%;
+  margin-bottom: 2rem;
+  font-family: 'Karla', cursive;
+}
+.orderLinks h1 {
+  color: black;
+  padding: 1rem;
+  font-family: 'Karla', cursive;
+}
+.oLinks ul {
+  display: flex;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.oLinks hr,
+.orderList hr {
+  color: #d3d4d3;
+  height: 0.2px;
+  border-width: 0;
+  background-color: rgb(208, 208, 208);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.oLinks ul li {
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.05);
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.8rem;
+  border-width: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.3rem;
+}
+/* Order Online END */
+
+/* Reservation Form */
+.formContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #f3eeea;
+}
+.formContainer label {
+  font-family: 'Karla', cursive;
+  font-size: 0.7rem;
+}
+.sh3 {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+form {
+  color: #edefee;
+  max-width: 30rem;
+  padding: 1.5rem;
+  font-family: 'Martazi', cursive;
+  /* border: 1px solid #ccc; */
+  background-color: #495e57;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
+}
+.formTitle {
+  text-align: left;
+}
+.formTitle img {
+  width: 1rem;
+  height: 2rem;
+}
+.formTitle h1 {
+  color: #f4ce14;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+}
+.formTitle h2 {
+  color: #edefee;
+  font-family: 'karla', cursive;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+.formTitle p {
+  color: #edefee;
+  font-family: 'karla', cursive;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.formButton {
+  display: block;
+  background-color: #f4ce14;
+  border-radius: 1.7rem;
+  border: none;
+  font-size: 1rem;
+  height: 2rem;
+  max-width: 85rem;
+  min-width: 25rem;
+  color: #495e57;
+  max-width: 40vw;
+  font-family: 'Indie Flower', cursive;
+  margin-bottom: 1rem;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
+}
+.formButton:hover {
+  background-color: #495e57;
+  color: #ffffff;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.BookImg {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.BookImg img {
+  width: 12rem;
+  height: 10rem;
+}
+input[type='checkbox'] {
+  align-items: right;
+  justify-content: right;
+  margin-left: 20rem;
+  width: 0.9rem;
+}
+.cardPay {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+.cvvIMG img {
+  width: 2rem;
+  height: 1.7rem;
+}
+.cvvIMG {
+  background-color: white;
+  height: 2.1rem;
+  width: 3rem;
+  border-radius: 0.2rem;
+}
+.cardPay input {
+  display: flex;
+  flex-direction: right;
+  width: 10.5rem;
+  margin-bottom: 1rem;
+}
+label {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-items: center;
+}
+.radiosPayment label {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+input,
+select {
+  display: flex;
+  justify-content: space-between;
+  width: 10px;
+
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 25.5rem;
+}
+.BookingSubmited {
+  text-align: center;
+  font-family: 'karla', cursive;
+  font-weight: bolder;
+  word-spacing: 0.3rem;
+  line-height: 2rem;
+}
+.BookingSubmited h2 {
+  color: #f4ce14;
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* Reservation Form END*/
+/* Login */
+.bottomLogin h3 {
+  font-size: 0.7rem;
+  font-family: 'karla', cursive;
+  color: #edefee;
+}
+.bottomLogin h3:hover {
+  color: #f4ce14;
+  transform: scale(1);
+  cursor: pointer;
+}
+.bottomLogin {
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.LoginButton {
+  margin-top: 1rem;
+  display: block;
+  background-color: #f4ce14;
+  border-radius: 1.7rem;
+  border: none;
+  font-size: 1rem;
+  height: 2rem;
+
+  min-width: 25rem;
+  color: #495e57;
+  max-width: 40vw;
+  font-family: 'karla', cursive;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  justify-items: center;
+  align-items: center;
+  align-self: center;
+}
+.LoginButton:hover {
+  background-color: #ffffff;
+  color: #495e57;
+  cursor: pointer;
+}
+.formButton:hover {
+  background-color: #495e57;
+  color: #ffffff;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Login END */
+/* SignUp */
+
+/* SignUp END*/
+
+/* About Us */
+.About {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 0.4fr) repeat(3, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #f3eeea;
+}
+.ai {
+  grid-area: 1 / 1 / 2 / 4;
+  justify-content: center;
+  display: flex;
+}
+.AboutUs h1 {
+  text-align: center;
+
+  font-size: 3rem;
+  margin: 2rem;
+  color: #f4ce14;
+  font-family: 'Caveat', cursive;
+}
+.AboutUs {
+  grid-area: 2 / 1 / 3 / 4;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+}
+.ap {
+  grid-area: 3 / 1 / 6 / 4;
+}
+.aimg {
+  grid-area: 1 / 4 / 6 / 7;
+}
+.ap p {
+  font-family: 'Martazi', cursive;
+  text-align: center;
+  color: #495e57;
+  font-size: 1.2rem;
+  padding: 3rem;
+  line-height: 3rem;
+}
+.iconAbout {
+  width: 3rem;
+}
+.imageAbout {
+  width: 30rem;
+  height: 100vh;
+  justify-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* About Us END */
+
+/* Small size screens */
+@media only screen and (max-width: 768px) {
+  .Nav {
+    grid-template-columns: auto;
+    display: block;
+    margin-bottom: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .NavList {
+    gap: 1.2rem;
+  }
+  .icon {
+    width: 0.8rem;
+    height: 0.7rem;
+    margin-right: 0.2rem;
+  }
+
+  .App a {
+    font-size: 0.7rem;
+  }
+  .Button1 {
+    width: 10rem;
+  }
+  .T-Title h1 {
+    font-size: 2rem;
+  }
+  .SpTitleButton h2 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+  .SpTitleButton {
+    grid-template-columns: auto;
+    display: block;
+  }
+  .SP {
+    grid-template-columns: auto;
+    display: block;
+  }
+  .SDataList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .TList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .BookNow {
+    display: block;
+  }
+  .BookNowImgContainer Img {
+    width: 15rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .LogoB {
+    width: 2rem;
+    padding: 0.3rem;
+  }
+  .BLogo {
+    width: 3rem;
+    margin: 2rem;
+  }
+  .Specials-Article {
+    margin-bottom: 2rem;
+    width: fit-content;
+  }
+  .MainArticle h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .MainArticle h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .MainArticle p {
+    font-size: 0.7rem;
+    margin-bottom: 4rem;
+  }
+  .MenuDataList {
+    display: block;
+  }
+  .Footer a {
+    font-size: smaller;
   }
 }
